@@ -1,0 +1,8 @@
+FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine as runtime
+RUN apk add --no-cache icu-libs
+RUN apk add --no-cache tzdata
+WORKDIR /publish
+COPY ./publish .
+ENV ASPNETCORE_URLS=http://+:9000
+EXPOSE 5000
+ENTRYPOINT ["dotnet", "my-leaking-app.dll"]

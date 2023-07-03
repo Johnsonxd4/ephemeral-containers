@@ -1,0 +1,10 @@
+.vscode/launch.json
+.vscode/tasks.json
+my-leaking-app/appsettings.Development.json
+my-leaking-app/appsettings.json
+my-leaking-app/.vs/**
+my-leaking-app/bin/Debug/**
+my-leaking-app/bin/Release/**
+my-leaking-app/obj/**
+my-leaking-app/my-leaking-app.csproj.user
+my-leaking-app/Properties/launchSettings.json
