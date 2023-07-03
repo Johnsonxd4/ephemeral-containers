@@ -1,5 +1,5 @@
  
- # Using ephemeral containers to dump dotnet memory application:
+ # Using kubernetes ephemeral containers to dump dotnet memory application:
  According with [kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/),  ephemeral container use case is: "Sometimes it's necessary to inspect the state of an existing Pod, however, for example to troubleshoot a hard-to-reproduce bug. In these cases you can run an ephemeral container in an existing Pod to inspect its state and run arbitrary commands."
 
  Considering the problem is hard to produce, its a good way to take all the information you need to understand the problem.
