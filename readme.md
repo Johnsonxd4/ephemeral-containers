@@ -41,7 +41,12 @@ securityContext:
     emptyDir:
       sizeLimit: 500Mi
 ```
-
+### Adding environment variables:
+Add the following environment variables to your container:
+```sh
+COMPlus_EnableDiagnostic=1
+TMPDIR=/tmp
+```
 ## Creating an ephemeral container:
 
 The easyest way to create an ephemeral container is using the command `kubectl debug`
