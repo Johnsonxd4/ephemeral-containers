@@ -34,7 +34,7 @@ securityContext:
 ```yaml
 
  volumeMounts:
-    - mountPath: /cache
+    - mountPath: /tmp
       name: cache-volume
   volumes:
   - name: cache-volume
