@@ -1,5 +1,5 @@
  
- # Using ephemeral containers to dump memory application:
+ # Using kubernetes ephemeral containers to dump dotnet memory application:
  According with [kubernetes documentation](https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/),  ephemeral container use case is: "Sometimes it's necessary to inspect the state of an existing Pod, however, for example to troubleshoot a hard-to-reproduce bug. In these cases you can run an ephemeral container in an existing Pod to inspect its state and run arbitrary commands."
 
  Considering the problem is hard to produce, its a good way to take all the information you need to understand the problem.
@@ -34,14 +34,19 @@ securityContext:
 ```yaml
 
  volumeMounts:
-    - mountPath: /cache
+    - mountPath: /tmp
       name: cache-volume
   volumes:
   - name: cache-volume
     emptyDir:
       sizeLimit: 500Mi
 ```
-
+### Adding environment variables:
+Add the following environment variables to your container:
+```sh
+COMPlus_EnableDiagnostic=1
+TMPDIR=/tmp
+```
 ## Creating an ephemeral container:
 
 The easyest way to create an ephemeral container is using the command `kubectl debug`
