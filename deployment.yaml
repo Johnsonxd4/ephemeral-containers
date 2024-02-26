@@ -18,7 +18,7 @@ spec:
       
       containers:
       
-      - image: johnsonxd4/my-leaking-app:1.0.0
+      - image: johnsonxd4/my-leaking-app:1.0.1
         securityContext:
           capabilities:
             add:
